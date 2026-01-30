@@ -1,0 +1,28 @@
+{
+    "figma_file_key": "mLzr95Yi2kwGyZBc44QiV7",
+    "total_frames": 22,
+    "frames": [
+        {"name": "Dashboard", "node_id": "4:2", "gt_image": "4-2.png", "target_route": "/"},
+        {"name": "Dashboard Navigation", "node_id": "4:344", "gt_image": "4-344.png", "target_route": "/nav-test"},
+        {"name": "Invoice List", "node_id": "4:660", "gt_image": "4-660.png", "target_route": "/invoices"},
+        {"name": "Invoice List-Dropdown", "node_id": "4:1140", "gt_image": "4-1140.png", "target_route": "/invoices/dropdown"},
+        {"name": "Schedule List", "node_id": "4:1635", "gt_image": "4-1635.png", "target_route": "/schedule"},
+        {"name": "Board List", "node_id": "4:2246", "gt_image": "4-2246.png", "target_route": "/board"},
+        {"name": "Customer List", "node_id": "4:2803", "gt_image": "4-2803.png", "target_route": "/customers"},
+        {"name": "Add Customer", "node_id": "4:3258", "gt_image": "4-3258.png", "target_route": "/customers/add"},
+        {"name": "Task preview timeline", "node_id": "4:3637", "gt_image": "4-3637.png", "target_route": "/tasks/timeline"},
+        {"name": "Calendar day", "node_id": "4:3942", "gt_image": "4-3942.png", "target_route": "/calendar/day"},
+        {"name": "Create Invoice", "node_id": "4:4239", "gt_image": "4-4239.png", "target_route": "/invoices/create"},
+        {"name": "Product", "node_id": "4:4567", "gt_image": "4-4567.png", "target_route": "/products"},
+        {"name": "Add Product", "node_id": "4:4981", "gt_image": "4-4981.png", "target_route": "/products/add"},
+        {"name": "Calendar Month", "node_id": "4:5455", "gt_image": "4-5455.png", "target_route": "/calendar/month"},
+        {"name": "Create event", "node_id": "4:5816", "gt_image": "4-5816.png", "target_route": "/calendar/create"},
+        {"name": "Task view", "node_id": "4:6241", "gt_image": "4-6241.png", "target_route": "/tasks/view"},
+        {"name": "Calendar year", "node_id": "4:6577", "gt_image": "4-6577.png", "target_route": "/calendar/year"},
+        {"name": "Chat", "node_id": "4:7438", "gt_image": "4-7438.png", "target_route": "/chat"},
+        {"name": "Sign Up", "node_id": "4:7725", "gt_image": "4-7725.png", "target_route": "/signup"},
+        {"name": "Login", "node_id": "4:8584", "gt_image": "4-8584.png", "target_route": "/login"},
+        {"name": "Recover", "node_id": "4:9302", "gt_image": "4-9302.png", "target_route": "/recover"},
+        {"name": "Confirm", "node_id": "4:9333", "gt_image": "4-9333.png", "target_route": "/confirm"}
+    ]
+}
