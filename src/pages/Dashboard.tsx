@@ -1,15 +1,13 @@
 import React from 'react';
 import { StatCard } from '../components/dashboard/StatCard';
+import { DashboardHeader } from '../components/dashboard/DashboardHeader';
+import { RecentOrdersTable } from '../components/dashboard/RecentOrdersTable';
+import { TopSellingList } from '../components/dashboard/TopSellingList';
 
 const Dashboard: React.FC = () => {
   return (
     <div className="p-8 space-y-8 max-w-[1600px] mx-auto">
-      <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-text-main">Dashboard</h1>
-        <div className="flex items-center gap-4">
-             {/* Placeholder for date/search */}
-        </div>
-      </div>
+      <DashboardHeader />
 
       {/* Stats Row */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -48,9 +46,7 @@ const Dashboard: React.FC = () => {
               <button className="text-[#9A9AA0] hover:text-primary transition-colors font-bold text-xl pb-3">...</button>
            </div>
            <div className="w-full h-[300px] flex items-center justify-center relative">
-               {/* Use the exported image but ensure it scales well */}
               <img src="./assets/images/chart-reports.png" alt="Reports Chart" className="w-full h-full object-contain" />
-              {/* Add axes labels manually if needed, but image should suffice for prototype */}
            </div>
         </div>
 
@@ -85,88 +81,8 @@ const Dashboard: React.FC = () => {
 
       {/* Lists Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-         {/* Recent Orders */}
-         <div className="lg:col-span-2 bg-white rounded-[20px] p-8 shadow-[0px_4px_20px_rgba(238,238,238,0.5)]">
-            <div className="flex justify-between items-center mb-8">
-              <h3 className="text-xl font-bold text-text-main">Recent Orders</h3>
-              <button className="bg-primary text-white text-xs font-bold px-4 py-2 rounded-xl shadow-md hover:bg-opacity-90 transition-all">View All</button>
-            </div>
-            <div className="overflow-x-auto">
-                <table className="w-full min-w-[600px] border-collapse">
-                    <thead>
-                        <tr className="text-left text-[#B5B7C0] text-sm">
-                            <th className="pb-6 font-medium pl-2">Tracking no</th>
-                            <th className="pb-6 font-medium">Product Name</th>
-                            <th className="pb-6 font-medium">Price</th>
-                            <th className="pb-6 font-medium">Total Order</th>
-                            <th className="pb-6 font-medium">Total Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-50">
-                        <tr className="group hover:bg-gray-50 transition-colors">
-                            <td className="py-5 pl-2 text-text-main font-bold">#876364</td>
-                            <td className="py-5 flex items-center gap-3 text-text-main font-medium">
-                                <div className="w-10 h-10 rounded-xl bg-[url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80')] bg-cover bg-center shadow-sm" />
-                                Camera Lens
-                            </td>
-                            <td className="py-5 text-text-main font-bold">$178</td>
-                            <td className="py-5"><span className="bg-[#EBF1FF] text-primary px-4 py-2 rounded-full font-bold text-xs">325</span></td>
-                            <td className="py-5 text-text-main font-bold">$1,46,660</td>
-                        </tr>
-                        <tr className="group hover:bg-gray-50 transition-colors">
-                            <td className="py-5 pl-2 text-text-main font-bold">#876368</td>
-                            <td className="py-5 flex items-center gap-3 text-text-main font-medium">
-                                <div className="w-10 h-10 rounded-xl bg-[url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80')] bg-cover bg-center shadow-sm" />
-                                Black Headphone
-                            </td>
-                            <td className="py-5 text-text-main font-bold">$1,190</td>
-                            <td className="py-5"><span className="bg-[#EBF1FF] text-primary px-4 py-2 rounded-full font-bold text-xs">50</span></td>
-                            <td className="py-5 text-text-main font-bold">$60,950</td>
-                        </tr>
-                        <tr className="group hover:bg-gray-50 transition-colors">
-                            <td className="py-5 pl-2 text-text-main font-bold">#876412</td>
-                            <td className="py-5 flex items-center gap-3 text-text-main font-medium">
-                                <div className="w-10 h-10 rounded-xl bg-[url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80')] bg-cover bg-center shadow-sm" />
-                                Mobile
-                            </td>
-                            <td className="py-5 text-text-main font-bold">$8,000</td>
-                            <td className="py-5"><span className="bg-[#EBF1FF] text-primary px-4 py-2 rounded-full font-bold text-xs">20</span></td>
-                            <td className="py-5 text-text-main font-bold">$1,60,000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-         </div>
-
-         {/* Top Selling */}
-         <div className="bg-white rounded-[20px] p-8 shadow-[0px_4px_20px_rgba(238,238,238,0.5)]">
-            <div className="flex justify-between items-center mb-8">
-              <h3 className="text-xl font-bold text-text-main">Top Selling Products</h3>
-            </div>
-            <div className="space-y-6">
-                 <div className="flex items-center gap-4 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all -mx-2">
-                    <div className="w-[70px] h-[70px] rounded-[14px] bg-[url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80')] bg-cover bg-center shrink-0 shadow-sm" />
-                    <div className="flex-1">
-                        <h4 className="font-bold text-text-main text-base mb-1 group-hover:text-primary transition-colors">Nike Shoes Black Pattern</h4>
-                        <div className="flex items-center gap-1 text-[#FFD66B] text-sm mb-1">
-                            ★★★★☆
-                        </div>
-                        <div className="font-extrabold text-text-main text-lg">$87</div>
-                    </div>
-                 </div>
-                 
-                 <div className="flex items-center gap-4 group cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition-all -mx-2">
-                    <div className="w-[70px] h-[70px] rounded-[14px] bg-[url('https://images.unsplash.com/photo-1605236453806-6ff36a8653f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80')] bg-cover bg-center shrink-0 shadow-sm" />
-                    <div className="flex-1">
-                        <h4 className="font-bold text-text-main text-base mb-1 group-hover:text-primary transition-colors">iPhone 12</h4>
-                        <div className="flex items-center gap-1 text-[#FFD66B] text-sm mb-1">
-                            ★★★★☆
-                        </div>
-                        <div className="font-extrabold text-text-main text-lg">$987</div>
-                    </div>
-                 </div>
-            </div>
-         </div>
+         <RecentOrdersTable />
+         <TopSellingList />
       </div>
     </div>
   );
